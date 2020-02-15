@@ -8,7 +8,7 @@ const Navbar = _ => {
     <div className="navbar">
       <div className="navbar-item-wrap">
         <div className="navbar-item">
-          <img src={ Logo } />
+          <img src={ Logo } alt="logo" />
         </div>
         <div className="navbar-item">
           <span>Stack</span>
@@ -19,7 +19,7 @@ const Navbar = _ => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Navbar;

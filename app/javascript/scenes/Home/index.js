@@ -1,7 +1,8 @@
 import React, { Fragment, useEffect } from 'react';
-import { useHistory } from "react-router-dom";
-import { withRouter } from 'react-router-dom';
+import { useHistory, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
+
+import { requestQuestions } from '../../store/actions/question';
 
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
@@ -17,7 +18,6 @@ const Home = props => {
   }
 
   function getMarkStatus(str) {
-    console.log(str);
     if (!str) return;
     return str.split(',')[0];
   }
@@ -29,11 +29,7 @@ const Home = props => {
 
   useEffect(_ => {
     requestQuestions();
-  }, []);
-
-  useEffect(_ => {
-    console.log(questions);
-  }, [questions]);
+  }, [requestQuestions]);
 
   return (
     <Fragment>
@@ -102,14 +98,12 @@ const Home = props => {
         </div>
       </div>
     </Fragment>
-  )
-}
+  );
+};
 
 const mapStateToProps = state => ({
   questions: state.questions,
 });
-
-import { requestQuestions } from '../../store/actions/question';
 
 const mapDispatchToProps = dispatch => ({
   requestQuestions: _ => dispatch(requestQuestions()),

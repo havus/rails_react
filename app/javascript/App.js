@@ -12,7 +12,7 @@ const App = _ => {
       <Route path='/question/new' exact component={NewQuestion} />
       <Route path='/question/:id' component={Question} />
     </Router>
-  )
-}
+  );
+};
 
 export default App;

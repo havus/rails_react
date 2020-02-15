@@ -2,8 +2,8 @@
 // like app/views/layouts/application.html.erb. All it does is render <div>Hello React</div> at the bottom
 // of the page.
 
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from 'react';
+import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import store from '../store/';
 
@@ -15,5 +15,5 @@ document.addEventListener('DOMContentLoaded', () => {
       <App />
     </Provider>,
     document.getElementById('root'),
-  )
-})
+  );
+});

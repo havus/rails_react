@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { useHistory } from "react-router-dom";
+import { useHistory } from 'react-router-dom';
 
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
@@ -10,7 +10,7 @@ const Question = _ => {
   const history = useHistory();
 
   function handleClickBack() {
-    history.push("/");
+    history.push('/');
   }
 
   return (
@@ -38,7 +38,7 @@ const Question = _ => {
         <div className="right-side"/>
       </div>
     </Fragment>
-  )
-}
+  );
+};
 
 export default Question;

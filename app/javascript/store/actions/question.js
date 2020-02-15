@@ -1,7 +1,7 @@
 import { FETCH_QUESTIONS } from '../actionTypes';
 
 const receiveQuestions = questions => ({
-  type: 'FETCH_QUESTIONS',
+  type: FETCH_QUESTIONS,
   questions,
 });
 
@@ -13,6 +13,6 @@ export const requestQuestions = _ => {
       })
       .then(data => {
         dispatch(receiveQuestions(data));
-      })
-  }
+      });
+  };
 };

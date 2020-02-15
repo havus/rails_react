@@ -4,9 +4,9 @@ const initialState = [];
 
 export const questions = (state = initialState, action) => {
   switch (action.type) {
-    case FETCH_QUESTIONS:
-      return [...action.questions];
-    default:
-      return state;
+  case FETCH_QUESTIONS:
+    return [...action.questions];
+  default:
+    return state;
   }
-}
+};

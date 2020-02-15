@@ -4,4 +4,4 @@ import NewQuestion from './newQuestion';
 export {
   Question,
   NewQuestion
-}
+};

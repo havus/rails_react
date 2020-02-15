@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import './sidebar.scss';
 
 const Sidebar = _ => {
@@ -9,7 +9,7 @@ const Sidebar = _ => {
         <li>Random</li>
       </ul>
     </div>
-  )
-}
+  );
+};
 
 export default Sidebar;
