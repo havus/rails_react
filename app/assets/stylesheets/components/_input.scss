@@ -1,0 +1,17 @@
+input[type='text'],
+input[type='number'],
+textarea {
+  padding: 7px;
+  border: 1.5px solid rgb(214, 214, 214);
+
+  &.rounded {
+    border-radius: 5px;
+    // rgb(34, 98, 200)
+  }
+  &:focus {
+    border: 1.5px solid #4388D6 !important;
+    box-shadow: 0 0 3px #4388D6 !important;
+    -moz-box-shadow: 0 0 3px #4388D6 !important;
+    -webkit-box-shadow: 0 0 3px #4388D6 !important;
+  }
+}
