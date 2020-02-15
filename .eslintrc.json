@@ -1,0 +1,15 @@
+{
+  "extends": "react-app",
+  "rules": {
+    "semi": "warn",
+    "no-console": "warn",
+    "no-debugger": "warn",
+    "indent": ["warn", 2],
+    "eqeqeq": "warn",
+    "no-alert": "warn",
+    "eol-last": "warn",
+    "no-empty-function": "warn",
+    "no-trailing-spaces": "warn",
+    "quotes": ["warn", "single", "avoid-escape"]
+  }
+}

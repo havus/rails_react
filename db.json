@@ -1,0 +1,104 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "title": "Passing an interface to another interface method in php",
+      "content": "Bagaimana caranya aku membuat JSON server, aku sudah mencoba beberapa cara dan tetap error",
+      "tags": ["php", "javascript"],
+      "mark": "last modify by,anon",
+      "votes": 99,
+      "answers": 3
+    },
+    {
+      "id": 2,
+      "title": "React / React-native - Get children of custom component",
+      "content": "I need to implement an event-listener model in OOP. Now I have EventInterface and",
+      "tags": ["react", "javascript"],
+      "mark": "last modify by,anon",
+      "votes": 199,
+      "answers": 10
+    },
+    {
+      "id": 3,
+      "title": "Coba ke dua",
+      "content": "Uhuy uhuy hoho"
+    },
+    {
+      "id": 4,
+      "title": "Coba ke dua",
+      "content": "Uhuy uhuy hoho"
+    },
+    {
+      "id": 5,
+      "title": "Coba ke dua",
+      "content": "Uhuy uhuy hoho"
+    },
+    {
+      "id": 6,
+      "title": "Coba ke dua",
+      "content": "Uhuy uhuy hoho"
+    },
+    {
+      "id": 7,
+      "title": "Coba ke dua",
+      "content": "Uhuy uhuy hoho"
+    },
+    {
+      "id": 8,
+      "title": "Coba ke dua",
+      "content": "Uhuy uhuy hoho"
+    },
+    {
+      "id": 9,
+      "title": "Coba ke dua",
+      "content": "Uhuy uhuy hoho"
+    },
+    {
+      "id": 10,
+      "title": "Coba ke dua",
+      "content": "Uhuy uhuy hoho"
+    },
+    {
+      "id": 11,
+      "title": "Coba ke dua",
+      "content": "Uhuy uhuy hoho"
+    },
+    {
+      "id": 12,
+      "title": "Coba ke dua",
+      "content": "Uhuy uhuy hoho"
+    },
+    {
+      "id": 13,
+      "title": "Coba ke dua",
+      "content": "Uhuy uhuy hoho"
+    },
+    {
+      "id": 14,
+      "title": "Coba ke dua",
+      "content": "Uhuy uhuy hoho"
+    },
+    {
+      "id": 15,
+      "title": "Coba ke dua",
+      "content": "Uhuy uhuy hoho"
+    },
+    {
+      "id": 17,
+      "title": "Coba ke dua",
+      "content": "Uhuy uhuy hoho"
+    },
+    {
+      "id": 18,
+      "title": "Coba ke dua",
+      "content": "Uhuy uhuy hoho"
+    }
+  ],
+  "answers": [
+    {
+      "id": 1,
+      "body": "Jadi gini gaes",
+      "questionId": 1
+    }
+  ]
+}
