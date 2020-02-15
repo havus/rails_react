@@ -57,22 +57,3 @@
     margin-right: auto;
   }
 }
-
-.side-bar {
-  left: 0;
-  padding-top: 50px;
-  position: fixed;
-  width: 270px;
-  border-right: 1px solid rgb(166, 170, 185);
-  height: 100%;
-  z-index: 10;
-
-  li {
-    padding: 10px 20px;
-
-    &:hover {
-      cursor: pointer;
-      background-color: #d2d7e9;
-    }
-  }
-}

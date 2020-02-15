@@ -1,16 +1,39 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import { useHistory } from "react-router-dom";
-import './style.scss';
+import { withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
+import './style.scss';
 
-const Home = _ => {
+const Home = props => {
+  const { questions, requestQuestions } = props;
+
   const history = useHistory();
 
-  function handleClick() {
-    history.push("/question");
+  function handleClick(id = 'new') {
+    history.push(`/question/${id}`);
   }
+
+  function getMarkStatus(str) {
+    console.log(str);
+    if (!str) return;
+    return str.split(',')[0];
+  }
+
+  function getMarkUser(str) {
+    if (!str) return;
+    return str.split(',')[1];
+  }
+
+  useEffect(_ => {
+    requestQuestions();
+  }, []);
+
+  useEffect(_ => {
+    console.log(questions);
+  }, [questions]);
 
   return (
     <Fragment>
@@ -25,45 +48,52 @@ const Home = _ => {
           <div className="sub-navigation">
             <button
               className="button circle blue"
-              onClick={handleClick}
+              onClick={() => handleClick()}
             >
               Ask Question
             </button>
           </div>
 
           <div className="card-box mt-10">
-            <div className="card justify-space-between pr-3">
-              <div className="card-body pr-5 flex flex-column">
-                <div className="title">
-                  <h3>title</h3>
-                </div>
+            {questions.map((question, iQuestion) => (
+              <div
+                key={iQuestion}
+                className="card justify-space-between pr-3"
+              >
+                <div className="card-body pr-5 flex flex-column">
+                  <div className="title">
+                    <h3 onClick={ () => handleClick(question.id) }>{ question.title }</h3>
+                  </div>
 
-                <div className="summary flex justify-space-between">
-                  <div className="tags mt-5">
-                    <div 
-                      className="tag"
-                    >
-                      tag
+                  <div className="summary flex justify-space-between">
+                    <div className="tags mt-5">
+
+                      {question.tags &&
+
+                      question.tags.map((tag, iTag) => (
+                        <div key={iTag} className="tag">{ tag }</div>
+                      ))}
+
+                    </div>
+                    <div className="mark align-self-end">
+                      <p>{ getMarkStatus(question.mark) }
+                        <span className="ml-1">{ getMarkUser(question.mark) }</span>
+                      </p>
                     </div>
                   </div>
-                  <div className="mark align-self-end">
-                    <p>mark
-                      <span>user</span>
-                    </p>
+                </div>
+                <div className="vote-box align-center">
+                  <div className="votes p-3 flex flex-column align-center">
+                    <span>{ question.votes }</span>
+                    <span>votes</span>
+                  </div>
+                  <div className="answers p-3 flex flex-column align-center">
+                    <span>{ question.answers }</span>
+                    <span>answers</span>
                   </div>
                 </div>
               </div>
-              <div className="vote-box align-center">
-                <div className="votes p-3 flex flex-column align-center">
-                  <span>10</span>
-                  <span>votes</span>
-                </div>
-                <div className="answers p-3 flex flex-column align-center">
-                  <span>12</span>
-                  <span>answers</span>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
 
@@ -75,4 +105,14 @@ const Home = _ => {
   )
 }
 
-export default Home;
+const mapStateToProps = state => ({
+  questions: state.questions,
+});
+
+import { requestQuestions } from '../../store/actions/question';
+
+const mapDispatchToProps = dispatch => ({
+  requestQuestions: _ => dispatch(requestQuestions()),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Home));

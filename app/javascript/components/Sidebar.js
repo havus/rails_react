@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import './style.scss';
+import './sidebar.scss';
 
 const Sidebar = _ => {
   return (

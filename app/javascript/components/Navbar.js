@@ -1,7 +1,7 @@
 import React from 'react';
 import Logo from 'images/logo.png';
 import DefaultProfile from 'images/profile.png';
-import './style.scss';
+import './navbar.scss';
 
 const Navbar = _ => {
   return (
