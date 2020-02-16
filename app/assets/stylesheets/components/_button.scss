@@ -26,13 +26,13 @@
 
   &.blue {
     color: white;
-    background-color: rgb(66, 110, 255);
+    background-color: #0a80f5;
 
     &:hover {
-      background-color: rgb(53, 97, 240);
+      background-color: #0973dc;
     }
     &:active {
-      background-color: rgb(47, 88, 224);
+      background-color: #0866c4;
     }
   }
 }

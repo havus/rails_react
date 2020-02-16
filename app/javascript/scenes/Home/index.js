@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 
 import { requestQuestions } from '../../store/actions/question';
 
-import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
 import './style.scss';
 
@@ -33,8 +32,6 @@ const Home = props => {
 
   return (
     <Fragment>
-      <Navbar />
-
       <div id="home">
         <Sidebar />
 

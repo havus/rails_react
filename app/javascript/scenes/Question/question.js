@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react';
 import { useHistory } from 'react-router-dom';
 
-import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
 
 import './style.scss';
@@ -15,8 +14,6 @@ const Question = _ => {
 
   return (
     <Fragment>
-      <Navbar />
-
       <div id="question">
         <Sidebar />
 
