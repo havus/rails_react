@@ -7,7 +7,7 @@
     height: 100vh;
     overflow-y: scroll;
     display: flex;
-    margin-top: 65px;
+    margin-top: 60px;
     padding-left: 270px;
 
     .container {
@@ -15,10 +15,56 @@
       display: flex;
       flex-direction: column;
       max-width: 1080px;
+
+      .sub-navigation {
+        display: flex;
+        justify-content: space-between;
+
+        h1 {
+          font-size: 33px;
+          color: rgb(49, 64, 116);
+        }
+      }
     }
 
     .right-side {
       width: 433px;
+      padding: 30px;
+
+      #announcement {
+        border-radius: 3px;
+        border: 1px solid #f2e5bd;
+        background-color: #fdf7e3;
+        
+        #announcement_header {
+          padding: 9px;
+          color: rgb(121, 121, 121);
+          background-color: #fbf2d4;
+        }
+        
+        #announcement_body {
+          padding: 9px;
+          font-size: 13px;
+          
+          .announcement_list {
+            display: flex;
+            
+            p {
+              color: rgb(100, 100, 100);
+              letter-spacing: 0;
+              margin-top: 3px;
+              font-weight: 500;
+
+            }
+
+            .icon {
+              color: #ec7a7a;
+              // min-width: 15px;
+              margin-right: 3px;
+            }
+          }
+        }
+      }
     }
     
     .card-box {
@@ -28,6 +74,7 @@
       border-radius: 3px;
       padding: 15px 7px;
     }
+
 
     .card {
       background-color: #c0dffc;

@@ -22,7 +22,7 @@ const Question = _ => {
             <div className="sub-navigation mb-2">
               <h1>Question</h1>
               <button
-                className="button circle blue"
+                className="button blue"
                 onClick={handleClickBack}
               >
                 Back

@@ -1,6 +1,7 @@
 import React, { Fragment, useEffect } from 'react';
 import { useHistory, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { AlertTriangle } from 'react-feather';
 
 import { requestQuestions } from '../../store/actions/question';
 
@@ -36,15 +37,18 @@ const Home = props => {
         <Sidebar />
 
         <div className="container">
-          <h1>Hello Gaes</h1>
-          <h1>Welkem bek to mai cenel!</h1>
-          <div className="sub-navigation">
+          <div className="sub-navigation p-3">
+            <h1>Top Questions</h1>
             <button
-              className="button circle blue"
+              className="button blue"
               onClick={() => handleClick()}
             >
               Ask Question
             </button>
+          </div>
+
+          <div id="filter-question" className="p-3">
+            pencarian
           </div>
 
           <div className="card-box mt-10">
@@ -91,7 +95,17 @@ const Home = props => {
         </div>
 
         <div className="right-side">
-          <p>right side</p>
+          <div id="announcement">
+            <div id="announcement_header">
+              Pengumuman
+            </div>
+            <div id="announcement_body">
+              <div className="announcement_list">
+                <AlertTriangle size="20" className="icon"/>
+                <p>Tolong untuk tidak disalah gunakan</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </Fragment>
