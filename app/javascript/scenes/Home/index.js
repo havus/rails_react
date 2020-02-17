@@ -1,9 +1,10 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useHistory, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { AlertTriangle } from 'react-feather';
 
 import { requestQuestions } from '../../store/actions/question';
+import Footer from '../../components/Footer';
 
 import Sidebar from '../../components/Sidebar';
 import './style.scss';
@@ -32,12 +33,12 @@ const Home = props => {
   }, [requestQuestions]);
 
   return (
-    <Fragment>
-      <div id="home">
+    <div id="home">
+      <div className="container">
         <Sidebar />
 
-        <div className="container">
-          <div className="sub-navigation p-3">
+        <div className="main-content">
+          <div className="sub-navigation p-3 mt-3">
             <h1>Top Questions</h1>
             <button
               className="button blue"
@@ -48,7 +49,7 @@ const Home = props => {
           </div>
 
           <div id="filter-question" className="p-3">
-            pencarian
+            field pencarian
           </div>
 
           <div className="card-box mt-10">
@@ -100,7 +101,7 @@ const Home = props => {
               Pengumuman
             </div>
             <div id="announcement_body">
-              <div className="announcement_list">
+              <div id="announcement_list">
                 <AlertTriangle size="20" className="icon"/>
                 <p>Tolong untuk tidak disalah gunakan</p>
               </div>
@@ -108,7 +109,8 @@ const Home = props => {
           </div>
         </div>
       </div>
-    </Fragment>
+      <Footer></Footer>
+    </div>
   );
 };
 

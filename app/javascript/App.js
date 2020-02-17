@@ -18,7 +18,7 @@ const App = _ => {
         <Route path='/question/:id' component={Question} />
         <Route component={NotFound} />
       </Switch>
-      <Route component={Footer} />
+      {/* <Route component={Footer} /> */}
     </Router>
   );
 };

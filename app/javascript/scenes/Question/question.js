@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 
 import Sidebar from '../../components/Sidebar';
 
-import './style.scss';
+import './question.scss';
 
 const Question = _ => {
   const history = useHistory();
